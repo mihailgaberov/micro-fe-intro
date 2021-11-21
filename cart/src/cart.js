@@ -17,6 +17,5 @@ export const login = (username, password) =>
   }).then(res => res.json())
     .then(data => {
       jwt.next(data.access_token);
-      // getCart();
       return data.access_token;
     })
