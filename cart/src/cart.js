@@ -1,6 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
 import { useEffect, useState } from 'react';
-import { fetch } from "rxjs/src/internal/umd";
 
 const API_SERVER = "http://localhost:8080";
 
