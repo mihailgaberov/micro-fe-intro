@@ -6,14 +6,26 @@ const API_SERVER = "http://localhost:8080";
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
 
-export const clearCart = (id) =>
+export const getCart = () =>
+  fetch(`${API_SERVER}/cart`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt.value}`
+    }
+  })
+    .then(res => res.json())
+    .then(res => {
+      cart.next(res);
+      return res;
+    });
+
+export const clearCart = () =>
   fetch(`${API_SERVER}/cart`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${jwt.value}`
-    },
-    body: JSON.stringify({ id })
+    }
   })
     .then(res => res.json())
     .then(() => {
@@ -33,20 +45,6 @@ export const addCart = (id) =>
     .then(() => {
       getCart();
     });
-
-export const getCart = () =>
-  fetch(`${API_SERVER}/cart`, {
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${jwt.value}`
-    }
-  })
-    .then(res => res.json())
-    .then(res => {
-      cart.next(res);
-      return res;
-    });
-
 
 export const login = (username, password) =>
   fetch(`${API_SERVER}/auth/login`, {
