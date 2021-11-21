@@ -6,7 +6,7 @@ const API_SERVER = "http://localhost:8080";
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
 
-export const clearCart = () =>
+export const clearCart = (id) =>
   fetch(`${API_SERVER}/cart`, {
     method: "DELETE",
     headers: {
