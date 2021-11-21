@@ -32,7 +32,7 @@ export const clearCart = () =>
       getCart();
     });
 
-export const addCart = (id) =>
+export const addToCart = (id) =>
   fetch(`${API_SERVER}/cart`, {
     method: "POST",
     headers: {
