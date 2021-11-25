@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import "remixicon/fonts/remixicon.css";
@@ -17,11 +18,9 @@ export default function MainLayout() {
         <Header />
         <div className="my-10">
           <Routes>
-            <Route exact path="/" component={HomeContent} />
-            <Route
-              path="product/:id"
-              element={<PDPContent />}
-            />
+            <Route exact path="/" element={<HomeContent />} />
+            <Route path="/product/:id" element={<PDPContent />} />
+            <Route path="/cart" element={<CartContent />} />
           </Routes>
         </div>
         <Footer />
