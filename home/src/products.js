@@ -1,4 +1,4 @@
-const API_SERVER = "https://nifty-hugle-40ce51.netlify.app/"
+const API_SERVER = "https://nifty-hugle-40ce51.netlify.app"
 
 export const getProducts = () => fetch(`${API_SERVER}/products`).then((res) => res.json());
 
