@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"cd addtocart && yarn start\" \"cd cart && yarn start\" \"cd home && yarn start\" \"cd pdp && yarn start \" \"cd server && yarn start:dev\"",
+    "build": "concurrently \"cd addtocart && yarn build\" \"cd cart && yarn build\" \"cd home && yarn build\" \"cd pdp && yarn build\" \"cd server && yarn build\""
+  },
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
