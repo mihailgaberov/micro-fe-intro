@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"cd addtocart && yarn start\" \"cd cart && yarn start\" \"cd home && yarn start\" \"cd pdp && yarn start \" \"cd server && yarn start:dev\"",
-    "build": "concurrently \"cd addtocart && yarn && yarn build:start\" \"cd cart && yarn && yarn build:start\" \"cd home && yarn && yarn build:start\" \"cd pdp && yarn && yarn build:start\" \"cd server && yarn && yarn start:prod\""
+    "build": "concurrently \"cd addtocart && yarn build && yarn build:start\" \"cd cart && yarn build && yarn build:start\" \"cd home && yarn build && yarn build:start\" \"cd pdp && yarn build && yarn build:start\" \"cd server && yarn build && yarn start:prod\""
   },
   "dependencies": {
     "concurrently": "^6.4.0"
