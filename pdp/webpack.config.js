@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3001/",
+    publicPath: "https://suspicious-yalow-32031b.netlify.app:3001/",
   },
 
   resolve: {
@@ -44,10 +44,10 @@ module.exports = {
       name: "pdp",
       filename: "remoteEntry.js",
       remotes: {
-        home: "home@http://localhost:3000/remoteEntry.js",
-        pdp: "pdp@http://localhost:3001/remoteEntry.js",
-        cart: "cart@http://localhost:3002/remoteEntry.js",
-        addtocart: "addtocart@http://localhost:3003/remoteEntry.js"
+        home: "home@https://peaceful-bhaskara-ff1d18.netlify.app:3000/remoteEntry.js",
+        pdp: "pdp@https://suspicious-yalow-32031b.netlify.app:3001/remoteEntry.js",
+        cart: "cart@https://romantic-mcclintock-6486c8.netlify.app:3002/remoteEntry.js",
+        addtocart: "addtocart@https://thirsty-wright-ebb426.netlify.app:3003/remoteEntry.js"
       },
       exposes: {
         "./PDPContent": "./src/PDPContent.jsx",
