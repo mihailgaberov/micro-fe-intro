@@ -1,7 +1,7 @@
 import { BehaviorSubject } from 'rxjs';
 import { useEffect, useState } from 'react';
 
-const API_SERVER = "http://localhost:8080";
+const API_SERVER = "https://micro-fe-server.herokuapp.com";
 
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
